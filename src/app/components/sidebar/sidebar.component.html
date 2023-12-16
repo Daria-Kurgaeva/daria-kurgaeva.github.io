@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <a class="logo" href="/">
+    <code class="logo__accent">
+      &lt;/&gt;
+    </code> DariaKurgaeva
+  </a>
+  <nav class="nav">
+    <ul class="menu">
+      <li
+        *ngFor="let item of menuItems"
+        class="menu__item"
+      >
+        <a class="menu__link" [href]="'#' + item.alias">{{item.name}}</a>
+      </li>
+    </ul>
+  </nav>
+</aside>

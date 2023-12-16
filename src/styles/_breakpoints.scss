@@ -1,0 +1,63 @@
+$screen-xxxl: 2560px;
+$screen-xxl: 1920px;
+$screen-xl: 1536px;
+$screen-l: 1280px;
+$screen-m: 1024px;
+$screen-s: 768px;
+$screen-xs: 412px;
+$screen-xxs: 360px;
+$screen-xxxs: 320px;
+
+@mixin screen-xxxl {
+  @media screen and (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin screen-xxl {
+  @media screen and (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media screen and (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin screen-l {
+  @media screen and (min-width: #{$screen-l}) {
+    @content;
+  }
+}
+
+@mixin screen-m {
+  @media screen and (min-width: #{$screen-m}) {
+    @content;
+  }
+}
+
+@mixin screen-s {
+  @media screen and (min-width: #{$screen-s}) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media screen and (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin screen-xxs {
+  @media screen and (min-width: #{$screen-xxs}) {
+    @content;
+  }
+}
+
+@mixin screen-xxxs {
+  @media screen and (min-width: #{$screen-xxs}) {
+    @content;
+  }
+}

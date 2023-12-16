@@ -1,0 +1,178 @@
+@use '../styles/mixins' as mixins;
+@use 'variables' as variables;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  min-width: 320px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--clr-txt-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  scrollbar-color: var(--stb-scrollbar-thumb-color) var(--stb-scrollbar-track-color);
+  scrollbar-width: thin;
+
+  @supports (scrollbar-gutter: stable) {
+    scrollbar-gutter: stable;
+  }
+
+  * {
+    scrollbar-color: inherit;
+    scrollbar-width: inherit;
+  }
+}
+
+body {
+  background-color: var(--clr-bgr-primary);
+}
+
+svg,
+img {
+  display: block;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 1px dashed rgb(var(--stb-brand-500));
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+  appearance: none;
+}
+
+input[type='date']::-webkit-date-and-time-value {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+// in order to remove default vertical paddings in Webkit browsers
+input::-webkit-datetime-edit,
+input::-webkit-datetime-edit-fields-wrapper,
+input::-webkit-datetime-edit-day-field,
+input::-webkit-datetime-edit-month-field,
+input::-webkit-datetime-edit-year-field,
+input::-webkit-datetime-edit-text {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+input[type='password'] {
+  &:not(:placeholder-shown) {
+    font-family: var(--stb-font-helper);
+  }
+
+  &::placeholder {
+    font-family: var(--stb-font-primary);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--stb-text-primary);
+
+  &:focus-visible {
+    outline: 1px dashed var(--stb-link-accent);
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}

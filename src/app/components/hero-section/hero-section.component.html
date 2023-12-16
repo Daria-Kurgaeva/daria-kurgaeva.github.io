@@ -1,0 +1,23 @@
+<section class="hero">
+  <picture class="hero__pic">
+    <img class="hero__img" [ngSrc]="'/assets/images/portrait@2x.png'" alt="Daria Kurgaeva portrait photo" height="900" width="600">
+  </picture>
+  <h1 class="hero__title main-title">
+    Hey, I'm <span class="main-title__name">Daria</span>,<br>
+    <span class="main-title__position">
+      <span
+        class="title-animation"
+        *ngFor="let item of positions"
+      >
+        {{item}}
+      </span>
+    </span>
+  </h1>
+<!--  <source srcset="750x100.png, 1500x200.png 2x">-->
+  <div class="hero__cta">
+    <button class=" button" type="button">
+      Download CV
+      <svg-icon-sprite src="download" width="24" height="24"></svg-icon-sprite>
+    </button>
+  </div>
+</section>

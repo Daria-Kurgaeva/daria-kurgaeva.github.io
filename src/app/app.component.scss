@@ -1,0 +1,12 @@
+.page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100%;
+
+  &__content {
+    padding: 40px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
